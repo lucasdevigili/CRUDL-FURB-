@@ -15,3 +15,32 @@ header {
     display: flex;
     justify-content: space-between
 }
+
+#footer {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    background-color: #00558c;
+    justify-content: center;
+}
+
+#footerContainer {
+    height: 70vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#teste {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+h2 {
+    color: white;
+}
+h3 {
+    color: white;
+}
