@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/Home/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Days+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 
@@ -12,51 +17,51 @@
     <header>
         <div id="headerContents">
             <div id="logo">
-                <img src="" alt="">
-                <h1>MarketSwap</h1>
+                <h1 class="logo">Market <span id="swap">Swap</span></h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#cadastro">Cadatro</a></li>
-                    <li><a href="#">Catalogo</a></li>
-                    <li><a href="#">Sobre</a></li>
+            <nav id="nav">
+                <ul id="menu">
+                    <li class="menu"><a href="#cadastro">Cadatro</a></li>
+                    <li class="menu"><a href="#">Catalogo</a></li>
+                    <li class="menu"><a href="#">Sobre</a></li>
                 </ul>
             </nav>
-            <a href="/LogIn.html"><span>Login</span></a>
+            <div id="cadastro">
+                <a href="/LogIn.html" class="cadastro"><i class="fa-regular fa-user"></i></a>
+            </div>
         </div>
     </header>
     <main>
-        <section id="Cadatro">
+        <section id="cadatro">
 
         </section>
-    </main>
 
-    <footer id="footer">
-        <div id="footerContainer">
-            <h2>
-                Sobre nós:
-            </h2>
-            <div id="teste">
-                <div>
-                    <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.39_1549ecc8.jpg" width="225"
-                        height="250" alt="O loco">
-                    <h3>Lucas Gabriel Devigili</h3>
-                </div>
-                <div>
-                    <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.47_e3441cf2.jpg" width="225"
-                        height="250" alt="Furro">
-                    <h3>André Luiz de Souza Nunes</h3>
-                </div>
-                <div>
-                    <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg" width="225"
-                        height="250" alt="A manga">
-                    <h3>Arthur Henrique Damann</h3>
+        <footer id="footer">
+            <div id="footerContainer">
+                <h2>
+                    Sobre nós:
+                </h2>
+                <div id="teste">
+                    <div>
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.39_1549ecc8.jpg" width="225"
+                            height="250" alt="O loco">
+                        <h3>Lucas Gabriel Devigili</h3>
+                    </div>
+                    <div>
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.47_e3441cf2.jpg" width="225"
+                            height="250" alt="Furro">
+                        <h3>André Luiz de Souza Nunes</h3>
+                    </div>
+                    <div>
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg" width="225"
+                            height="250" alt="A manga">
+                        <h3>Arthur Henrique Damann</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <script src="static/Home/Index.js"></script>
+        </footer>
+    </main>
 </body>
+<script src="static/Home/Index.js"></script>
 
 </html>

@@ -3,8 +3,10 @@
     margin: 0;
 }
 header {
+    height: 15vh;
     width: 100vw;
-    background-color: aquamarine;
+    background-color: #00558C;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +18,60 @@ header {
     justify-content: space-between
 }
 
+#logo {
+    align-self: center;
+}
+
+.logo {
+    font-size: 40px;
+    font-family: "Days One", sans-serif;
+    font-style: normal;
+}
+
+#swap {
+    font-family: "Dancing Script", cursive;
+}
+
+#nav {
+    width: 50%;
+    align-self: center;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu a{
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.menu a:hover{
+    color: rgb(255, 255, 255);
+}
+#active {
+    color: rgb(255, 255, 255);
+}
+
+#cadastro {
+    align-self: center;
+    font-size: 30px;
+}
+
+.fa-user {
+    color: white;
+}
+
+.fa-user:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
 #footer {
     height: 70vh;
     width: 100vw;
