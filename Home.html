@@ -22,9 +22,11 @@
             </div>
             <nav id="nav">
                 <ul id="menu">
-                    <li class="menu"><a href="#cadastro">Cadatro</a></li>
-                    <li class="menu"><a href="#">Catalogo</a></li>
-                    <li class="menu"><a href="#">Sobre</a></li>
+                    <li class="menu"><a href="#register">Cadastro</a></li>
+                    <span class="menuSpan"></span>
+                    <li class="menu"><a href="#">Catálogo</a></li>
+                    <span class="menuSpan"></span>
+                    <li class="menu"><a href="#footer">Sobre</a></li>
                 </ul>
             </nav>
             <div id="cadastro">
@@ -33,30 +35,65 @@
         </div>
     </header>
     <main>
-        <section id="cadatro">
+        <section id="register">
+            <div id="registerContainer">
+                <h2 id="registerTitle">Cadastrar novo produto:</h2>
+                <form action="#">
+                    <div id="registerTop">
+                        <label for="nameProduct" class="registerLabel">
+                            <span class="required">*</span>Nome do Produto:
+                            <input type="text" id="nameProduct" required>
+                            <span class="registerError">Este campo é obrigatório</span>
+                        </label>
 
+                        <label for="category" class="registerLabel">
+                            <span class="required">*</span>Categoria:
+                            <input type="text" id="category" required>
+                            <span class="registerError">Este campo é obrigatório</span>
+                        </label>
+                    </div>
+
+                    <div id="registerMidlle">
+                        <label for="price" class="registerLabel">
+                            <span class="required">*</span>Preço:
+                            <input type="text" id="price" required>
+                            <span class="registerError">Este campo é obrigatório</span>
+                        </label>
+                    </div>
+
+                    <div id="registerBottom">
+                        <label for="descript" id="registerDescript">
+                            Descrição:
+                            <textarea name="descrição" id="descript" cols="168" rows="10"></textarea>
+                        </label>
+                    </div>
+                    <div id="registerbutton">
+                        <button class="registerbutton" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <footer id="footer">
             <div id="footerContainer">
-                <h2>
+                <h2 id="footerTitle">
                     Sobre nós:
                 </h2>
-                <div id="teste">
-                    <div>
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.39_1549ecc8.jpg" width="225"
+                <div id="images">
+                    <div class="img">
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.39_1549ecc8.jpg"
                             height="250" alt="O loco">
-                        <h3>Lucas Gabriel Devigili</h3>
+                        <h3 class="partNames">Lucas Gabriel Devigili</h3>
                     </div>
-                    <div>
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.47_e3441cf2.jpg" width="225"
+                    <div class="img">
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.47_e3441cf2.jpg"
                             height="250" alt="Furro">
-                        <h3>André Luiz de Souza Nunes</h3>
+                        <h3 class="partNames">André Luiz de Souza Nunes</h3>
                     </div>
-                    <div>
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg" width="225"
+                    <div class="img">
+                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg"
                             height="250" alt="A manga">
-                        <h3>Arthur Henrique Damann</h3>
+                        <h3 class="partNames">Arthur Henrique Damann</h3>
                     </div>
                 </div>
             </div>
