@@ -11,11 +11,21 @@ html {
 header {
     height: 15vh;
     width: 100%;
-    background-color: #00558C;
+    background-color: #00548c;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
+      transition: 500ms;
+}
+
+
+.headerSmall {
+    height: 10vh;
+    background-color: #00548cc9;
+    transition: 500ms;
 }
 
 #headerContents {
@@ -33,6 +43,11 @@ header {
     font-weight: 100;
     font-family: "Days One", sans-serif;
     font-style: normal;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
 }
 
 #swap {
@@ -53,49 +68,45 @@ header {
     list-style-type: none;
 }
 
-.menu a{
+.menu a {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-size: 20px;
     font-family: sans-serif;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: rgb(255, 255, 255);
 }
 
 .menuSpan {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 #active {
     color: rgb(255, 255, 255);
 }
 
 #cadastro {
+    display: flex;
     align-self: center;
     font-size: 30px;
 }
 
-.userButton  {
-    width: 40px;
-    height: 40px;
-    align-self: center;
-    border-radius: 100%;
-    color: transparent;
-    border: none;
+.userButton {
+    width: 50px;
+    height: 50px;
 }
 
 .userImg {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-}
-
-.userButton, .userImg {
-    z-index: 3;
+    cursor: pointer;
 }
 
 .fa-user {
+    z-index: 1;
     color: white;
 }
 
@@ -129,15 +140,15 @@ header {
     margin-bottom: 20px;
 }
 
-.registerLabel input{
+.registerLabel input {
     height: 50px;
-   width: 95%;
-   border-radius: 10px;
-   border: none;
-   display: block;
-   font-size: 20px;
-   padding-left: 5px;
-   margin-top: 5px;
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5px;
 }
 
 #registerDescript {
@@ -162,11 +173,11 @@ header {
 
 }
 
-#registerMidlle{
+#registerMidlle {
     display: flex;
 }
 
-#registerBottom{
+#registerBottom {
     display: flex;
 
 }
@@ -195,7 +206,8 @@ header {
     transition: 500ms;
 }
 
-.required, .registerError {
+.required,
+.registerError {
     color: red;
 }
 
@@ -223,7 +235,7 @@ header {
     justify-content: space-evenly;
 }
 
-#footerTitle{
+#footerTitle {
     font-size: 40px;
     color: white;
 }
@@ -238,9 +250,10 @@ header {
     width: 225px;
 }
 
-.img img{
+.img img {
     width: 100%;
     border-radius: 5px;
+    background-size: cover;
 }
 
 .partNames {

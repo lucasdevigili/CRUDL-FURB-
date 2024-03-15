@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <header>
+    <header class="header" id="header">
         <div id="headerContents">
             <div id="logo">
-                <h1 class="logo">Market <span id="swap">Swap</span></h1>
+                <a href="#"><h1 class="logo">Market <span id="swap">Swap</span></h1></a>
             </div>
             <nav id="nav">
                 <ul id="menu">
@@ -29,28 +29,25 @@
                     <li class="menu"><a href="#footer">Sobre</a></li>
                 </ul>
             </nav>
-            <div id="cadastro">
-                <a href="/LogIn.html" class="cadastro"><i class="fa-regular fa-user"></i></a>
-                <button class="userButton"><img src="static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg" alt="" class="userImg"></button>
-            </div>
+            <div id="cadastro"></div>
         </div>
     </header>
     <main>
         <section id="register">
             <div id="registerContainer">
                 <h2 id="registerTitle">Cadastrar novo produto:</h2>
-                <form action="#">
+                <form action="#" id="form">
                     <div id="registerTop">
                         <label for="nameProduct" class="registerLabel">
                             <span class="required">*</span>Nome do Produto:
                             <input type="text" id="nameProduct" required>
-                            <span class="registerError">Este campo é obrigatório</span>
+                            <span class="registerError" id="nameError"></span>
                         </label>
 
                         <label for="category" class="registerLabel">
                             <span class="required">*</span>Categoria:
                             <input type="text" id="category" required>
-                            <span class="registerError">Este campo é obrigatório</span>
+                            <span class="registerError"  id="catError"></span>
                         </label>
                     </div>
 
@@ -58,7 +55,7 @@
                         <label for="price" class="registerLabel">
                             <span class="required">*</span>Preço:
                             <input type="text" id="price" required>
-                            <span class="registerError">Este campo é obrigatório</span>
+                            <span class="registerError" id="priceError"></span>
                         </label>
                     </div>
 
@@ -69,7 +66,7 @@
                         </label>
                     </div>
                     <div id="registerbutton">
-                        <button class="registerbutton" type="submit">Enviar</button>
+                        <button class="registerbutton" type="button" onclick="getItens()">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -86,14 +83,14 @@
                 </h2>
                 <div id="images">
                     <div class="img">
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.39_1549ecc8.jpg"
+                        <img src="./static/img/img Lucas.png"
                             height="250" alt="O loco">
                         <h3 class="partNames">Lucas Gabriel Devigili</h3>
                     </div>
                     <div class="img">
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.24.47_e3441cf2.jpg"
+                        <img src="./static/img/img André.png"
                             height="250" alt="Furro">
-                        <h3 class="partNames">André Luiz de Souza Nunes</h3>
+                        <h3 class="partNames">André Luiz de Souza N.</h3>
                     </div>
                     <div class="img">
                         <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg"
