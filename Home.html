@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/Home/Styles.css">
+    <link rel="stylesheet" href="static/home/css/header.css">
+    <link rel="stylesheet" href="static/home/css/register.css">
+    <link rel="stylesheet" href="static/home/css/catalog.css">
+    <link rel="stylesheet" href="static/home/css/footer.css">
+    <link rel="stylesheet" href="static/home/css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
@@ -18,7 +22,9 @@
     <header class="header" id="header">
         <div id="headerContents">
             <div id="logo">
-                <a href="#"><h1 class="logo">Market <span id="swap">Swap</span></h1></a>
+                <a href="#">
+                    <h1 class="logo">Market <span id="swap">Swap</span></h1>
+                </a>
             </div>
             <nav id="nav">
                 <ul id="menu">
@@ -29,7 +35,7 @@
                     <li class="menu"><a href="#footer">Sobre</a></li>
                 </ul>
             </nav>
-            <div id="cadastro"></div>
+            <div id="registration"></div>
         </div>
     </header>
     <main>
@@ -47,7 +53,7 @@
                         <label for="category" class="registerLabel">
                             <span class="required">*</span>Categoria:
                             <input type="text" id="category" required>
-                            <span class="registerError"  id="catError"></span>
+                            <span class="registerError" id="catError"></span>
                         </label>
                     </div>
 
@@ -73,7 +79,91 @@
         </section>
 
         <section id="catalog">
-
+            <div id="catalogContainer">
+                <h2>Catálogo de Produtos:</h2>
+                <div id="catalogOptions">
+                    <select name="select">
+                        <option value="A - Z">A - Z</option>
+                        <option value="Z - A">Z - A</option>
+                        <option value="Menor Valor">Menor Valor</option>
+                        <option value="Maior Valor">Maior Valor</option>
+                    </select>
+                </div>
+                <table>
+                    <tr>
+                        <th>Nome categoria:</th>
+                        <th>Categoria:</th>
+                        <th>Preço:</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Alfredo</td>
+                        <td>Gaming</td>
+                        <td>R$90,00</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jorges</td>
+                        <td>Porta</td>
+                        <td>R$20,00</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Arthur</td>
+                        <td>Kagura</td>
+                        <td>R$1500,00</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>PC building</td>
+                        <td>R$545,00</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>André</td>
+                        <td>Furro</td>
+                        <td>R$234,45</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lucas</td>
+                        <td>"Serviços"</td>
+                        <td>R$3000,00</td>
+                        <td>
+                            <div class="icons">
+                                <i class="fa-solid fa-trash"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>       
         </section>
 
         <footer id="footer">
@@ -83,25 +173,30 @@
                 </h2>
                 <div id="images">
                     <div class="img">
-                        <img src="./static/img/img Lucas.png"
-                            height="250" alt="O loco">
+                        <img src="./static/home/css/img/imgLucas.png" alt="O loco">
                         <h3 class="partNames">Lucas Gabriel Devigili</h3>
                     </div>
                     <div class="img">
-                        <img src="./static/img/img André.png"
-                            height="250" alt="Furro">
+                        <img src="./static/home/css/img/imgAndre.png" alt="Furro">
                         <h3 class="partNames">André Luiz de Souza N.</h3>
                     </div>
                     <div class="img">
-                        <img src="./static/img/Imagem do WhatsApp de 2024-03-07 à(s) 09.21.29_6e6542a2.jpg"
-                            height="250" alt="A manga">
+                        <img src="./static/home/css/img/imgCarlinhos.jpg" alt="A manga">
                         <h3 class="partNames">Arthur Henrique Damann</h3>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
+
+    <div id="modal" class="modalHidden slide-left">
+        <div id="modalContainer">
+            <i class="fa-solid fa-arrow-left" onclick="modalHidden()"></i></i>
+            <span onclick="closeUser()">Sair</span>
+        </div>
+    </div>
 </body>
-<script src="static/Home/Index.js"></script>
+<script src="static/home/js/products.js"></script>
+<script src="static/home/js/styles.js"></script>
 
 </html>

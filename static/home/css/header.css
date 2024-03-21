@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    height: 15vh;
+    width: 100%;
+    background-color: #00548c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    transition: 500ms;
+}
+
+#headerContents {
+    width: 90%;
+    display: flex;
+    justify-content: space-between
+}
+
+.headerStatic {
+    position: fixed;
+}
+
+#logo {
+    align-self: center;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 100;
+    font-family: "Days One", sans-serif;
+    font-style: normal;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+#swap {
+    font-family: "Dancing Script", cursive;
+}
+
+#nav {
+    width: 50%;
+    align-self: center;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.menu a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.menuSpan {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#active {
+    color: rgb(255, 255, 255);
+}
+
+#registration {
+    display: flex;
+    align-self: center;
+    font-size: 35px;
+}
+
+.userButton {
+    width: 50px;
+    height: 50px;
+}
+
+.userImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.fa-user {
+    z-index: 1;
+    color: white;
+}
+
+.fa-user:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.headerSmall {
+    height: 10vh;
+    background-color: #00548cc9;
+    transition: 500ms;
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .menu a {
+        font-size: 15px;
+
+    }
+
+    #registration {
+        font-size: 25px;
+    }
+
+    .userButton {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        height: 10vh;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #registration {
+        font-size: 25px;
+    }
+
+    .userButton {
+        width: 40px;
+        height: 40px;
+    }
+}

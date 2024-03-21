@@ -4,34 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/LogIn/Styles.css">
+    <link rel="stylesheet" href="static/login/css/styles.css">
+    <link rel="stylesheet" href="static/login/css/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Days+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Market Swap</title>
 </head>
 
 <body>
-        <div id="box">
-            <div id="boxContenst">
-                <div id="title">
-                    <h2>LogIn</h2>
-                </div>
-                <form action="#" id="form">
-                    <div id="email">
-                        <label for="email">E-mail:</label>
-                        <input type="email" class="input">
+    <header>
+        <div id="headerContainer">
+            <div id="headerMenu">
+                <i class="fa-solid fa-bars" onclick="openModal()"></i>
+            </div>
+            <a href="#">
+                <h1 class="logo" onclick="reload()">Market <span id="swap">Swap</span></h1>
+            </a>
+        </div>
+    </header>
+    <section>
+        <div id="left">
+            <div id="leftContainer">
+                <h3>Login</h3>
+                <h2>BEM VINDO</h2>
+                <p class="logo">Market <span id="swap">Swap</span>
+                    <span>, o maior site de venda e troca de produtos do Brasil.</span>
+                </p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="box">
+                <div id="boxContainer">
+                    <h2>Bem Vindo</h2>
+                    <form action="#">
+                        <div id="loginName">
+                            <label for="email">
+                                E-mail:
+                                <input type="email" id="email" required />
+                                <span id="emailError"></span>
+                            </label>
+                        </div>
+                        <div id="loginPassword">
+                            <label for="password">
+                                Senha:
+                                <input type="password" id="password" required />
+                                <span id="passwordError"></span>
+                            </label>
+                        </div>
+                        <button onclick="validate()">Entrar</button>
+                    </form>
+                    <div id="line"></div>
+                    <div id="formOthers">
+                        <a href="#">Esqueci a senha</a>
+                        <a href="home.html">Cadastrar-se</a>
                     </div>
-                    <div id="password">
-                        <label for="password">Senha:</label>
-                        <input type="password" class="input">
-                    </div>
-                    <button type="submit" class="submit">Entrar</button>
-                </form>
-                <div id="buttons">
-                    <a href="Home.html"><span>Esqueci a senha</span></a>
-                    <a href="#"><span>Cadastrar-se</span></a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <div id="blur" class="modalHidden">
+        <div id="modal" class="slide-right">
+            <div id="modalContainer">
+                <i class="fa-solid fa-arrow-left" onclick="modalHidden()"></i>
+                <div id="modalList">
+                    <ul>
+                        <li id="textOne">Nosso legado</li>
+                            <div class="modalTexts" class="textOne">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
+                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
+                                necessitatibus ex aspernatur magnam rerum iure!
+                            </div>
+                        <li id="textTwo">Por quem fazemos</li>
+                            <div class="modalTexts"  class="textTwo">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
+                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
+                                necessitatibus ex aspernatur magnam rerum iure!
+                            </div>
+                        <li id="textThree">Nosso futuro</li>
+                            <div class="modalTexts"  class="textThree">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
+                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
+                                necessitatibus ex aspernatur magnam rerum iure!
+                            </div>
+                    </ul>
+                </div>
+                <img src="static/login/css/img/delivery.jpg" alt="">
+            </div>
+        </div>
     </div>
-    <script src="static/LogIn/Index.js"></script>
 </body>
+<script src="static/login/js/index.js"></script>
+<script src="static/login/js/modal.js"></script>
 
 </html>

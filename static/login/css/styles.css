@@ -1,0 +1,230 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, rgba(0, 85, 140, 1) 50%, rgba(46, 172, 253, 1) 100%);
+}
+
+header {
+    height: 10vh;
+}
+
+#headerContainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerMenu {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+#headerMenu i {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#headerMenu i:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 100;
+    font-family: "Days One", sans-serif;
+    font-style: normal;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+#swap {
+    font-family: "Dancing Script", cursive;
+}
+
+section {
+    display: flex;
+}
+
+#left,
+#right {
+    height: 90vh;
+    width: 50%;
+}
+
+#left {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#leftContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#leftContainer h3 {
+    font-size: 35px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+#leftContainer h2 {
+    font-size: 100px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#leftContainer p {
+    font-size: 30px;
+    width: 70%;
+}
+
+#box {
+    height: 100%;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#boxContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#boxContainer h2 {
+    height: 120px;
+    font-size: 70px;
+    color: #00558C;
+}
+
+#loginName,
+#loginPassword {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    border: 1px solid gray;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5px;
+
+}
+
+label span {
+    color: red;
+    font-size: 15px;
+}
+
+#boxContainer button {
+    height: 40px;
+    width: 100px;
+    margin: 10px 0px 30px;
+    border-radius: 10px;
+    background-color: #6CB45A;
+    font-size: 20px;
+    color: white;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+#boxContainer button:hover {
+    background-color: #278311;
+    transition: 500ms;
+}
+
+#line {
+    height: 2px;
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+#formOthers {
+    display: flex;
+    justify-content: space-between;
+}
+
+#formOthers a {
+    color: black;
+    cursor: pointer;
+}
+
+#formOthers a:hover {
+    color: red;
+}
+
+@media only screen and (max-width: 900px) {
+    #headerContainer {
+        width: 60%;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left {
+        height: 30vh;
+        width: 100%;
+    }
+
+    #right {
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #headerContainer {
+        width: 75%;
+    }
+
+    #leftContainer h3 {
+        font-size: 25px;
+    }
+    
+    #leftContainer h2 {
+        font-size: 50px;
+    }
+    
+    #leftContainer p {
+        font-size: 15px;
+    }
+
+    #boxContainer h2 {
+       display: none;
+    }
+
+    #boxContainer button {
+        width: 100%;
+    }
+}
