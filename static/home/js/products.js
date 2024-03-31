@@ -56,7 +56,6 @@ function validate(itens) {
 
 function add(itens) {
     localStorage.setItem(itens.nameProduct, JSON.stringify(itens));
-
 }
 
 function sortTable(option) {
@@ -73,16 +72,9 @@ function sortTable(option) {
             x = rows[i].getElementsByTagName("TD")[option].innerHTML.toLowerCase();
             y = rows[i + 1].getElementsByTagName("TD")[option].innerHTML.toLowerCase();
 
-            if (option === 0) {
-                if (x > y) {
-                    shouldSwitch = true;
-                    break;
-                }
-            } else {
-                if (x < y) {
-                    shouldSwitch = true;
-                    break;
-                }
+            if (x > y) {
+                shouldSwitch = true;
+                break;
             }
         }
         if (shouldSwitch) {
@@ -137,8 +129,9 @@ document.getElementById("sortingOption").addEventListener("change", function() {
     } else if (sortOption === "Menor Valor" || sortOption === "Maior Valor") {
         optionIndex = 2;
     }
-
+    
     sortTable(optionIndex);
 });
+
 
 window.onload = retrieveAndDisplayItems;
