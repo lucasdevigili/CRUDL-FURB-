@@ -58,32 +58,6 @@ function add(itens) {
     localStorage.setItem(itens.nameProduct, JSON.stringify(itens));
 }
 
-function sortTable(option) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.querySelector("table");
-    switching = true;
-
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[option].innerHTML.toLowerCase();
-            y = rows[i + 1].getElementsByTagName("TD")[option].innerHTML.toLowerCase();
-
-            if (x > y) {
-                shouldSwitch = true;
-                break;
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
-
 function retrieveAndDisplayItems() {
     var table = document.querySelector("table");
 
@@ -120,18 +94,19 @@ function retrieveAndDisplayItems() {
     }
 }
 
-document.getElementById("sortingOption").addEventListener("change", function() {
-    var sortOption = this.value;
-    var optionIndex;
+function deleteItem(key) {
+    localStorage.removeItem(key);
+    retrieveAndDisplayItems();
+}
 
-    if (sortOption === "A - Z" || sortOption === "Z - A") {
-        optionIndex = 0;
-    } else if (sortOption === "Menor Valor" || sortOption === "Maior Valor") {
-        optionIndex = 2;
+function editItem(key) {
+    var newValue = prompt("Insira o novo valor:");
+    if (newValue !== null) {
+        var item = JSON.parse(localStorage.getItem(key));
+        item.priceProduct = newValue;
+        localStorage.setItem(key, JSON.stringify(item));
+        retrieveAndDisplayItems();
     }
-    
-    sortTable(optionIndex);
-});
-
+}
 
 window.onload = retrieveAndDisplayItems;
