@@ -17,30 +17,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-window.addEventListener("scroll", function () {
-    var register = document.getElementById("navRegister");
-    var catalog = document.getElementById("navCatalog");
-    var about = document.getElementById("navAbout");
-
-    if (window.scrollY > 0) {
-        register.classList.add("active");
-        catalog.classList.remove("active");
-        about.classList.remove("active");
-    }
-
-    if (window.scrollY > 700) {
-        register.classList.remove("active");
-        catalog.classList.add("active");
-        about.classList.remove("active");
-    }
-
-    if (window.scrollY > 1200) {
-        register.classList.remove("active");
-        catalog.classList.remove("active");
-        about.classList.add("active");
-    }
-});
-
 // Colocar a foto de perfil caso esteja logado
 var registration = document.getElementById("registration");
 var valor = localStorage.getItem("isLoggedIn");
