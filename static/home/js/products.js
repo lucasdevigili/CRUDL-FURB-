@@ -46,7 +46,7 @@ function insertProduct(product, index) {
     tr.innerHTML = `
         <td>${product.name}</td>
         <td>${product.category}</td>
-        <td>${product.price}</td>
+        <td>R$${product.price}</td>
         <td>
             <div class="icons">
                 <i onclick="deleteProduct(${index}); return false;" class="fa-solid fa-trash"></i>

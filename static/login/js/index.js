@@ -25,8 +25,8 @@ function validate() {
 
     if (statusEmail === 1 && statusPassword === 1) {
         localStorage.setItem("isLoggedIn", "1");
-        const homePath = `${window.location.origin}/home.html`;
-        window.open(homePath);
+        const homePath = `${window.location.origin}/Home.html`;
+        window.location.href = homePath
     }
 }
 
