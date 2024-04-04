@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/login/css/styles.css">
-    <link rel="stylesheet" href="static/login/css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
@@ -18,9 +17,6 @@
 <body>
     <header>
         <div id="headerContainer">
-            <div id="headerMenu">
-                <i class="fa-solid fa-bars" onclick="openModal()"></i>
-            </div>
             <a href="#">
                 <h1 class="logo" onclick="reload()">Market <span id="swap">Swap</span></h1>
             </a>
@@ -44,61 +40,32 @@
                         <div id="loginName">
                             <label for="email">
                                 E-mail:
-                                <input type="email" id="email" required />
+                                <input type="email" id="email" class="inpt" />
                                 <span id="emailError"></span>
                             </label>
                         </div>
                         <div id="loginPassword">
                             <label for="password">
                                 Senha:
-                                <input type="password" id="password" required />
+                                <input type="password" id="password"  class="inpt"required />
                                 <span id="passwordError"></span>
                             </label>
                         </div>
                         <button onclick="validate()">Entrar</button>
                     </form>
                     <div id="line"></div>
+                    <label for="remember" id="remember">
+                        <input type="checkbox">
+                        Lembrar de mim
+                    </label>
                     <div id="formOthers">
                         <a href="#">Esqueci a senha</a>
-                        <a href="home.html">Cadastrar-se</a>
+                        <a href="#">Cadastrar-se</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div id="blur" class="modalHidden">
-        <div id="modal" class="slide-right">
-            <div id="modalContainer">
-                <i class="fa-solid fa-arrow-left" onclick="modalHidden()"></i>
-                <div id="modalList">
-                    <ul>
-                        <li id="textOne">Nosso legado</li>
-                            <div class="modalTexts" class="textOne">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
-                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
-                                necessitatibus ex aspernatur magnam rerum iure!
-                            </div>
-                        <li id="textTwo">Por quem fazemos</li>
-                            <div class="modalTexts"  class="textTwo">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
-                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
-                                necessitatibus ex aspernatur magnam rerum iure!
-                            </div>
-                        <li id="textThree">Nosso futuro</li>
-                            <div class="modalTexts"  class="textThree">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste facilis nobis unde
-                                autem. Quidem voluptatibus omnis possimus dignissimos, provident beatae eaque, eius impedit
-                                necessitatibus ex aspernatur magnam rerum iure!
-                            </div>
-                    </ul>
-                </div>
-                <img src="static/login/css/img/delivery.jpg" alt="">
-            </div>
-        </div>
-    </div>
 </body>
 <script src="static/login/js/index.js"></script>
-<script src="static/login/js/modal.js"></script>
-
 </html>

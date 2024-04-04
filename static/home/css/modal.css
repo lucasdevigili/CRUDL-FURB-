@@ -72,7 +72,7 @@
 
 @media only screen and (max-width: 900px) {
   #modal {
-    width: 20%;
+    width: 30%;
     top: 10vh;
   }
 }

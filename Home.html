@@ -28,11 +28,11 @@
             </div>
             <nav id="nav">
                 <ul id="menu">
-                    <li class="menu"><a href="#register">Cadastro</a></li>
+                    <li class="menu"><a href="#register" id="navRegister" class="desable">Cadastro</a></li>
                     <span class="menuSpan"></span>
-                    <li class="menu"><a href="#catalog">Catálogo</a></li>
+                    <li class="menu"><a href="#catalog" id="navCatalog" class="desable">Catálogo</a></li>
                     <span class="menuSpan"></span>
-                    <li class="menu"><a href="#footer">Sobre</a></li>
+                    <li class="menu"><a href="#footer" id="navAbout" class="desable">Sobre</a></li>
                 </ul>
             </nav>
             <div id="registration"></div>
@@ -72,7 +72,7 @@
                         </label>
                     </div>
                     <div id="registerbutton">
-                        <button class="registerbutton" type="button" onclick="getItens()">Enviar</button>
+                        <button class="registerbutton" id="btn" type="button">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -81,89 +81,16 @@
         <section id="catalog">
             <div id="catalogContainer">
                 <h2>Catálogo de Produtos:</h2>
-                <div id="catalogOptions">
-                    <select name="select">
-                        <option value="A - Z">A - Z</option>
-                        <option value="Z - A">Z - A</option>
-                        <option value="Menor Valor">Menor Valor</option>
-                        <option value="Maior Valor">Maior Valor</option>
-                    </select>
-                </div>
-                <table>
+                <table id="table">
                     <tr>
                         <th>Nome categoria:</th>
                         <th>Categoria:</th>
                         <th>Preço:</th>
                         <th></th>
                     </tr>
-                    <tr>
-                        <td>Alfredo</td>
-                        <td>Gaming</td>
-                        <td>R$90,00</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jorges</td>
-                        <td>Porta</td>
-                        <td>R$20,00</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Arthur</td>
-                        <td>Kagura</td>
-                        <td>R$1500,00</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>João</td>
-                        <td>PC building</td>
-                        <td>R$545,00</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>André</td>
-                        <td>Furro</td>
-                        <td>R$234,45</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Lucas</td>
-                        <td>"Serviços"</td>
-                        <td>R$3000,00</td>
-                        <td>
-                            <div class="icons">
-                                <i class="fa-solid fa-trash"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                        </td>
-                    </tr>
+                    <tbody id="tbody"></tbody>
                 </table>
-            </div>       
+            </div>
         </section>
 
         <footer id="footer">
@@ -198,5 +125,4 @@
 </body>
 <script src="static/home/js/products.js"></script>
 <script src="static/home/js/styles.js"></script>
-
 </html>

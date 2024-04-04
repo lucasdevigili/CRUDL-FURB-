@@ -13,13 +13,13 @@ body {
 
 header {
     height: 10vh;
+    width: 100%;
 }
 
 #headerContainer {
     height: 100%;
-    width: 55%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -122,11 +122,11 @@ section {
     margin-bottom: 20px;
 }
 
-label {
+form label {
     font-size: 20px;
 }
 
-input {
+form input {
     border: 1px solid gray;
     height: 50px;
     width: 100%;
@@ -164,6 +164,11 @@ label span {
     width: 100%;
     background-color: gray;
     margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#remember {
+    margin-bottom: 30px;
 }
 
 #formOthers {

@@ -23,11 +23,13 @@ function validate() {
         statusPassword = 1
     }
 
-    if (statusEmail == 1 && statusPassword == 1) {
-        alert("aaaaaaa")
+    if (statusEmail === 1 && statusPassword === 1) {
+        localStorage.setItem("isLoggedIn", "1");
+        const homePath = `${window.location.origin}/home.html`;
+        window.open(homePath);
     }
-}   
+}
 
 function reload() {
-    window.location.reload()
+    window.location.reload();
 }

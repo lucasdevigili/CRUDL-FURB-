@@ -17,23 +17,50 @@ window.addEventListener("scroll", function () {
     }
 });
 
+window.addEventListener("scroll", function () {
+    var register = document.getElementById("navRegister");
+    var catalog = document.getElementById("navCatalog");
+    var about = document.getElementById("navAbout");
+
+    if (window.scrollY > 0) {
+        register.classList.add("active");
+        catalog.classList.remove("active");
+        about.classList.remove("active");
+    }
+
+    if (window.scrollY > 700) {
+        register.classList.remove("active");
+        catalog.classList.add("active");
+        about.classList.remove("active");
+    }
+
+    if (window.scrollY > 1200) {
+        register.classList.remove("active");
+        catalog.classList.remove("active");
+        about.classList.add("active");
+    }
+});
+
 // Colocar a foto de perfil caso esteja logado
 var registration = document.getElementById("registration");
-var valor = 1;
+var valor = localStorage.getItem("isLoggedIn");
 
 updateCadastro();
 
+setInterval(updateCadastro, 1000);
+
 function updateCadastro() {
-    if (valor === 0) {
-        registration.innerHTML = '<a href="/login.html" class="registration"><i class="fa-regular fa-user"></i></a>';
-    } else if (valor === 1) {
+    valor = localStorage.getItem("isLoggedIn");
+
+    if (valor === "1") {
         registration.innerHTML = '<a class="userButton" href="#"><img src="./static/home/css/img/user.jpg" alt="user img" class="userImg" onclick="openModal()"></a>';
+    } else {
+        registration.innerHTML = '<a href="/login.html" class="registration"><i class="fa-regular fa-user"></i></a>';
     }
 }
 
 function closeUser() {
-    valor = 0;
-    updateCadastro();
+    localStorage.setItem("isLoggedIn", "0");
     modal.classList.add("modalHidden");
 }
 
@@ -44,4 +71,3 @@ function openModal() {
 function modalHidden() {
     modal.classList.add("modalHidden");
 }
-
